@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="index.js" defer></script>
+    <title>Cash Tracker</title>
+</head>
+<body>
+    <div class="container">
+        <nav class="nav">
+            <div class="logo">DLcashControl</div>
+
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Outgoings</a></li>
+                <li><a href="#">Income</a></li>
+            </ul>
+        </nav>
+        <header class="header"></header>
+        <main class="main">
+            <div class="left">
+                <form id="form">
+                    <label for="product">Product</label>
+                    <input type="text" id="product" />
+
+                    <label for="amount">Amount</label>
+                    <input type="text" id="amount" />
+
+                    <button type="submit" id="submit">Enter</button>
+                </form>
+
+                <div class="sideNav">
+                    <ol>
+                        <li id="viewTotal">View total expenses</li>
+                        <li id="viewByProduct">View by product</li>
+                        <li id="viewTotal">View by date</li>
+                        <li id="resetLocalStorage"><span style="color: red;">Reset All data</span></li>
+                    </ol>
+                </div>
+            </div>
+            <div class="right">
+                <div id="content"></div>
+                <div id="priceBox"></div>
+            </div>
+        </main>
+        <footer class="footer"></footer>
+    </div>
+</body>
+</html>
