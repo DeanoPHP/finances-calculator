@@ -199,9 +199,13 @@ main {
 @media screen and (max-width: 800px) {
     .container {
         width: 98%;
+
+        ul li {
+            display: none;
+        }
     
         header {
-            height: 500px;
+            height: 300px;
         }
     }
     
@@ -229,7 +233,6 @@ main {
     
         .right {
             width: 100%;
-            // padding-left: 40px;
         }
     }
     
