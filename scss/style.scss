@@ -233,6 +233,33 @@ main {
     
         .right {
             width: 100%;
+
+
+        }
+    }
+
+    .searchForm {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        // background-color: aqua;
+
+        .h1-products {
+            // text-align: center;
+            margin: 0 auto;
+        }
+
+        label {
+            margin: 0 auto;
+        }
+
+        input {
+            margin: 10px auto;
+        }
+
+        button {
+            margin: 10px auto;
         }
     }
     
@@ -247,4 +274,8 @@ main {
             width: 100%;
         }
     }
+}
+
+.displayByItem li{
+    width: 100%;
 }
