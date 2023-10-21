@@ -1,5 +1,6 @@
 const global = {
     currentPage: window.location.pathname,
+    addProductForm: document.getElementById('addProduct'),
     form: document.getElementById('form'),
     product: document.getElementById('product'),
     amount: document.getElementById('amount'),
@@ -10,6 +11,11 @@ const global = {
     viewTotal: document.getElementById('viewTotal'),
     viewByProduct: document.getElementById('viewByProduct'),
     search: ''
+}
+
+// add product form 
+const addProductForm = () => {  
+    return global.form ? global.form.style.display = 'block': global.form.style.display = 'block';
 }
 
 // navbar toggle
@@ -75,6 +81,7 @@ const getFromStorage = () => {
 const displayProductByItemNameForm = () => {
     global.content.innerHTML = '';
     global.priceBox.innerHTML = '';
+    global.form.style.display = 'none';
 
     const div = document.createElement('div');
     div.innerHTML = `
@@ -97,7 +104,6 @@ const formByProduct = (e) => {
     global.search = document.getElementById('productSearch').value.toLowerCase();
 
     console.log(global.search);
-    // getProductByNameAndCalcTotalValue(global.search);
     getProductByItemName(global.search);
 }
 
@@ -112,6 +118,7 @@ const getProductByItemName = () => {
 
 const displayProductByItemName = (search) => {
     global.content.innerHTML = '';
+    global.form.style.display = 'none';
 
     const amount = getProductByNameAndCalcTotalValue();
     const getProduct = search;
@@ -190,7 +197,8 @@ const getProductsByDate = () => {
 
 const viewTotal = () => {
     global.content.innerHTML = '';
-    global.priceBox.innerHTML = '';
+    global.priceBox.innerHTML = ''; 
+    global.form.style.display = 'none';
 
     const getProduct = getFromStorage();
     const getPrAndCalc = getProductAndCalc();
@@ -220,9 +228,11 @@ const viewTotal = () => {
 
 const render = () => {
     if (global.viewTotal) {
-        viewTotal();
+        viewTotal(); 
     }  else if (global.viewByProduct) {
         displayProductByItemName();
+    } else if (global.addProductForm) {
+        addProductForm();
     }
 }
 
@@ -238,12 +248,13 @@ const eventListeners = () => {
     global.resetStorage.addEventListener('click', resetStorage);
     global.viewTotal.addEventListener('click', viewTotal);
     global.viewByProduct.addEventListener('click', displayProductByItemNameForm);
+    global.addProductForm.addEventListener('click', addProductForm);
 }
 
 const init = () => {
     eventListeners();
-
-    getProductsByDate();
+    
+    // getProductsByDate();
 }
 
 init();

@@ -145,6 +145,7 @@ main {
         form {
             width: 80%;
             height: 200px;
+            display: none;
             margin: 20px auto;
 
             label {
@@ -225,9 +226,7 @@ main {
 .searchForm {
     width: 100%;
     height: 50px;
-    // border-bottom: 1px solid orange;
     padding: 10px;
-    // margin: 20px 0 20px 0;
     margin: 0 auto;
     display: block;
 }
