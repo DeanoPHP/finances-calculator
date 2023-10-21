@@ -12,6 +12,14 @@ const global = {
     search: ''
 }
 
+// navbar toggle
+const toggle = document.getElementById('toggle');
+const nav = document.getElementById('nav');
+
+toggle.addEventListener('click', () => {
+    nav.classList.toggle('active');
+});
+
 const onSubmit = (e) => {
     e.preventDefault();
     

@@ -10,15 +10,20 @@
 </head>
 <body>
     <div class="container">
-        <nav class="nav">
-            <div class="logo">DLcashControl</div>
-
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Outgoings</a></li>
-                <li><a href="#">Income</a></li>
-            </ul>
-        </nav>
+        <div class="navContainer">
+            <nav class="active" id="nav">
+                <ul>
+                    <li id="viewTotal" ><a href="#">Total</a></li>
+                    <li id="viewByProduct"><a href="#">Product</a></li>
+                    <li id="viewTotal"><a href="#">By Date</a></li>
+                </ul>
+                <button class="icon" id="toggle">
+                    <div class="line line1"></div>
+                    <div class="line line2"></div>
+                </button>
+            </nav>
+        </div>
+        
         <header class="header"></header>
         <main class="main">
             <div class="left">
@@ -31,19 +36,11 @@
 
                     <button type="submit" id="submit">Enter</button>
                 </form>
-
-                <div class="sideNav">
-                    <ol>
-                        <li id="viewTotal">View total expenses</li>
-                        <li id="viewByProduct">View by product</li>
-                        <li id="viewTotal">View by date</li>
-                        <li id="resetLocalStorage"><span style="color: red;">Reset All data</span></li>
-                    </ol>
-                </div>
             </div>
             <div class="right">
                 <div id="content"></div>
                 <div id="priceBox"></div>
+                <li id="resetLocalStorage"><span style="color: red;">Reset All data</span></li>
             </div>
         </main>
         <footer class="footer"></footer>
