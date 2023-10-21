@@ -214,7 +214,7 @@ const viewTotal = () => {
 
     const priceBox = document.createElement('div');
     priceBox.classList.add('priceBox');
-    priceBox.innerHTML = `The total you spent this month is <span style="color: red; font-size:1.2em;">£${getPrAndCalc}.00</span>`; 
+    priceBox.innerHTML = `Total: <span style="color: red; font-size:1.2em;">£${getPrAndCalc}.00</span>`; 
     global.priceBox.appendChild(priceBox);
 }
 

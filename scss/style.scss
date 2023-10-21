@@ -213,9 +213,13 @@ main {
 }
 
 .priceBox {
-    width: 50%;
+    width: 100%;
     height: 30px; 
     padding-left: 20px;
+}
+
+#priceBox {
+    width: 100%;
 }
 
 .searchForm {
